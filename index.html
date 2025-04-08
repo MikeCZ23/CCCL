@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabulka s filtrováním podle kategorií</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+  <h1>Tabulka s filtrováním podle kategorií</h1>
+
+  <table id="myTable" class="display">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Commodity</th>
+        <th>Produced by</th>
+        <th>Refinery</th>
+        <th>Agriculture</th>
+        <th>High Tech</th>
+        <th>Military</th>
+        <th>Industrial</th>
+        <th>Consumed by</th>
+        <th>Extraction</th>
+        <th>Refinery</th>
+        <th>Agriculture</th>
+        <th>High Tech</th>
+        <th>Military</th>
+        <th>Industrial</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Foods</td>
+        <td>Animal Meat</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Foods</td>
+        <td>Fish</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Foods</td>
+        <td>Fruit and Vegetables</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Legal Drugs</td>
+        <td>Beer</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Foods</td>
+        <td>Coffee</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Foods</td>
+        <td>Tea</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Advanced Catalysers</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Metals</td>
+        <td>Aluminium</td>
+        <td></td>
+        <td>Refinery</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td>Extraction</td>
+        <td>Refinery</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Robotics</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Software</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Weapons</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Medicines</td>
+        <td>Agri-Medicines</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Medicines</td>
+        <td>Basic Medicines</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td>Indusrial</td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Weapons</td>
+        <td>Battle Weapons</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td>Military</td>
+        <td>Indusrial</td>
+        <td></td>
+        <td></td>
+        <td>Refinery</td>
+        <td>Agriculture</td>
+        <td></td>
+        <td>Military</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Bioreducing Lichen</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Extraction</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+        <td>Waste</td>
+        <td>Biowaste</td>
+        <td colspan="2">Everything except agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Machinery</td>
+        <td>Building Fabricators</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Industrial</td>
+        <td>Non-agriculture, non-industrial, non-refinery (surface)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Industrial Materials</td>
+        <td>Ceramic Composites</td>
+        <td></td>
+        <td>Refinery (Surface)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td>Industrial</td>
+      </tr>
+      <tr>
+        <td>Industrial Materials</td>
+        <td>CMM Composite</td>
+        <td></td>
+        <td>Refinery (Surface)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td>Military</td>
+        <td>Indusrial</td>
+      </tr>
+      <tr>
+        <td>Machinery</td>
+        <td>Crop Harvesters</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Indusrial</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Machinery</td>
+        <td>Emergency Power Cells</td>
+        <td></td>
+        <td>Refinery</td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td>Military</td>
+        <td>Indusrial</td>
+      </tr>
+      <tr>
+        <td>Consume Items</td>
+        <td>Evacuation Shelter</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+        <td>Everything else (surface)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Foods</td>
+        <td>Food Cartridges</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Indusrial</td>
+        <td>Non-agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Machinery</td>
+        <td>Geological Equipment</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Industrial</td>
+        <td>Non-agriculture, non-industrial, non-refinery (surface)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>H.E. Suits</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Extraction</td>
+        <td>Refinery</td>
+        <td></td>
+        <td></td>
+        <td>Military</td>
+        <td>Industrial</td>
+      </tr>
+      <tr>
+        <td>Industrial Materials</td>
+        <td>Insulating Membrane</td>
+        <td></td>
+        <td>Refinery (Space)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td>Military</td>
+        <td>Indusrial</td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Land Enrichment Systems</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>High Tech</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Chemicals</td>
+        <td>Liquid Oxygen</td>
+        <td></td>
+        <td>Refinery</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Industrial</td>
+      </tr>
+      <tr>
+        <td>Legal Drugs</td>
+        <td>Liquor</td>
+        <td></td>
+        <td></td>
+        <td>Agriculture</td>
+        <td></td>
+        <td></td>
+        <td>Industrial</td>
+        <td>Everything else</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Medical Diagnostic Equipment</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Micro Controllers</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Machinery</td>
+        <td>Microbial Furnaces</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Textiles</td>
+        <td>Military Grade Fabrics</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Machinery</td>
+        <td>Mineral Extractors</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Moon Imager</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Weapons</td>
+        <td>Non-Lethal Weapons</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Chemicals</td>
+        <td>Pesticides</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Industrial Materials</td>
+        <td>Polymers</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Machinery</td>
+        <td>Power Generators</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Weapons</td>
+        <td>Reactive Armour</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Resonating Separators</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Robotics</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Industrial Materials</td>
+        <td>Semiconductors</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Metals</td>
+        <td>Steel</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>Structural Regulators</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Industrial Materials</td>
+        <td>Superconductors</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Chemicals</td>
+        <td>Surface Stabilisers</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Survival Equipment</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Machinery</td>
+        <td>Thermal Cooling Units</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Metals</td>
+        <td>Titanium</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Water</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Water Purifiers</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Wine</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    $(document).ready(function () {
+      const table = $('#myTable').DataTable({
+        language: {
+          url: "//cdn.datatables.net/plug-ins/1.13.4/i18n/cs.json"
+        },
+        pageLength: 100
+      });
+    });
+  </script>
+</body>
+</html>

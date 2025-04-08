@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+.filter-container {
+  margin-bottom: 20px;
+}
+
+table tr td:nth-child(4),
+table th:nth-child(4) {
+color: gold;
+}
+
+table tr td:nth-child(5),
+table th:nth-child(5) {
+color: green;
+}
+
+table tr td:nth-child(6),
+table th:nth-child(6) {
+color: lightblue;
+}
+
+table tr td:nth-child(7),
+table th:nth-child(7) {
+color: red;
+}
+
+table tr td:nth-child(8),
+table th:nth-child(8) {
+color: orange;
+}
+
+table tr td:nth-child(10),
+table th:nth-child(10) {
+color: blue;
+}
+
+table tr td:nth-child(11),
+table th:nth-child(11) {
+color: gold;
+}
+
+table tr td:nth-child(12),
+table th:nth-child(12) {
+color: green;
+}
+
+table tr td:nth-child(13),
+table th:nth-child(13) {
+color: lightblue;
+}
+
+table tr td:nth-child(14),
+table th:nth-child(14) {
+color: red;
+}
+
+table tr td:nth-child(15),
+table th:nth-child(15) {
+color: orange;
+}
+
+table th, table td{
+    border: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+table th{
+    background-color: rgb(82, 82, 82);
+    color: white;
+}
+
+table{
+    padding-top: 5px;
+}
