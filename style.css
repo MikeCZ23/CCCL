@@ -74,10 +74,10 @@ table{
     padding-top: 5px;
 }
 
-h1 a{
+a{
   color: #000;
   text-decoration: none;
 }
-h1 a:hover{
+a:hover{
   text-decoration: underline;
 }
