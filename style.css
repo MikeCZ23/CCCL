@@ -95,3 +95,21 @@ tbody tr:nth-child(even) {
 #myTable_filter label input{
     background: #b2b2b2 !important;
 }
+
+#resetFilters{
+    background-color: #630000;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#resetFilters:hover{
+    background-color: #800000;
+}
+
+th.filtered {
+  background-color: #787878;
+  color: #000;
+}
