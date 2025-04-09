@@ -29,6 +29,7 @@ color: red;
 table tr td:nth-child(8),
 table th:nth-child(8) {
 color: orange;
+  border-right: 2px solid #333;
 }
 
 table tr td:nth-child(10),
