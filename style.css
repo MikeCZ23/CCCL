@@ -77,6 +77,10 @@ table{
     padding-top: 5px;
 }
 
+h1{
+  color: gray;
+}
+
 a{
   color: #000;
   text-decoration: none;
