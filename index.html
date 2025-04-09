@@ -12,6 +12,8 @@
 <body>
   <h1><a href="https://github.com/MikeCZ23/CCCL">Colonization Construction Commodities List</a></h1>
 
+  <!-- <button id="resetFilters">Resetovat filtr</button> -->
+
   <table id="myTable" class="display">
     <thead>
       <tr>
@@ -953,7 +955,7 @@
     </tbody>
   </table>
 
-  <script>
+    <script>
     $(document).ready(function () {
       const table = $('#myTable').DataTable({
         language: {
@@ -962,7 +964,32 @@
         pageLength: 100,
         order: [[1, 'asc']],
       });
+  
+      // Kliknutí na hlavičku sloupce pro filtr
+      $('#myTable thead th').on('click', function () {
+        const colIndex = $(this).index();
+        const th = $(this);
+        const isFiltered = th.hasClass('filtered');
+  
+        // Přepínání filtru
+        if (isFiltered) {
+          table.column(colIndex).search('').draw(); // Reset filtru
+          th.removeClass('filtered'); // Odebrání indikace
+        } else {
+          table.column(colIndex).search('^(?!\\s*$).+', true, false).draw(); // Filtr na neprázdné buňky
+          th.addClass('filtered'); // Přidání indikace
+        }
+      });
+  
+      // Reset všech filtrů a vizuální indikace
+      $('#resetFilters').on('click', function () {
+        table.search('') // Reset globálního vyhledávání
+             .columns().search('') // Reset filtrů všech sloupců
+             .order([[1, 'asc']]) // Reset řazení na výchozí hodnotu
+             .draw(); // Obnova zobrazení tabulky
+        $('#myTable thead th').removeClass('filtered'); // Odebrání indikace ze všech sloupců
+      });
     });
-  </script>
+    </script>
 </body>
 </html>
