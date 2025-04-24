@@ -10,57 +10,61 @@ body {
 
 table tr td:nth-child(4),
 table th:nth-child(4) {
-color: gold;
+color: rgb(191, 18, 191);;
 }
-
 table tr td:nth-child(5),
 table th:nth-child(5) {
-color: green;
+color: gold;
 }
 
 table tr td:nth-child(6),
 table th:nth-child(6) {
-color: lightblue;
+color: green;
 }
 
 table tr td:nth-child(7),
 table th:nth-child(7) {
-color: red;
+color: lightblue;
 }
 
 table tr td:nth-child(8),
 table th:nth-child(8) {
+color: red;
+}
+
+table tr td:nth-child(9),
+table th:nth-child(9) {
 color: orange;
 border-right: 4px solid rgb(77, 77, 77);
 }
 
-table tr td:nth-child(10),
-table th:nth-child(10) {
-color: rgb(191, 18, 191);;
-}
-
 table tr td:nth-child(11),
 table th:nth-child(11) {
-color: gold;
+color: rgb(191, 18, 191);;
 }
 
 table tr td:nth-child(12),
 table th:nth-child(12) {
-color: green;
+color: gold;
 }
 
 table tr td:nth-child(13),
 table th:nth-child(13) {
-color: lightblue;
+color: green;
 }
 
 table tr td:nth-child(14),
 table th:nth-child(14) {
-color: red;
+color: lightblue;
 }
 
 table tr td:nth-child(15),
 table th:nth-child(15) {
+color: red;
+}
+
+table tr td:nth-child(16),
+table th:nth-child(16) {
 color: orange;
 }
 
